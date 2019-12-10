@@ -29,6 +29,7 @@ io.on('connection', function(socket){ //3
   console.log('user connected: ', socket.id);  //3-1
   var name = "user" + count++;   
   if(name!=null) {name = id;}              //3-1
+  else{name = "Unknown Dodie"}
   io.to(socket.id).emit('change name',name);   //3-1
 
   socket.on('disconnect', function(){ //3-2
@@ -50,5 +51,6 @@ http.listen(server_port, function(){ //4
 });
 function saveData (Account, msg){
 // array 1000 개 만들어서 이전 1000개의 대화명/대화 저장해서 누구 접속할때마다 띄워줄것
+	
 
 }
