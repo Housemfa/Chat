@@ -1,0 +1,16 @@
+{
+  "name": "dodie-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "chat.js",
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start":"node chat.js",	  
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
