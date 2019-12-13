@@ -14,6 +14,7 @@
 // });
 
 var express = require('express');
+var fs = require('fs');
 var app = express();
 var http = require('http').Server(app); //1
 var io = require('socket.io')(http);    //1
@@ -51,6 +52,13 @@ http.listen(server_port, function(){ //4
 });
 function saveData (Account, msg){
 // array 1000 개 만들어서 이전 1000개의 대화명/대화 저장해서 누구 접속할때마다 띄워줄것
-	
-
 }
+app.get('/imgs', function(req, res){
+	fs.readFile('img/tree.gif' ,function(error, data){
+		res.writeHead(200,{'Content-Type':'text/html'});
+		res.end(data);
+	});
+});
+//app.get('/imgs',function(req,res){
+//	fs.readFile('')
+//});
